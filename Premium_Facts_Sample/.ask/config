@@ -1,0 +1,41 @@
+{
+  "deploy_settings": {
+    "default": {
+      "skill_id": "amzn1.ask.skill.a31a1f7e-4a7e-472a-bddf-581c950154a0",
+      "was_cloned": false,
+      "merge": {
+        "manifest": {
+          "apis": {
+            "custom": {
+              "endpoint": {
+                "uri": "ask-custom-Premium_Facts_Sample-default"
+              }
+            }
+          }
+        }
+      },
+      "in_skill_products": [
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/entitlement/science_pack.json",
+          "productId": "amzn1.adg.product.05fa1799-23ba-4f0b-84aa-73285b7cea48"
+        },
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/entitlement/history_pack.json",
+          "productId": "amzn1.adg.product.b57d3658-81af-4864-b598-1f6aea69a69a"
+        },
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/entitlement/space_pack.json",
+          "productId": "amzn1.adg.product.aa06f9b8-ffe1-42bc-9d1e-82440c1dc67d"
+        },
+        {
+          "deploy_status": "Update",
+          "filePath": "isps/subscription/all_access.json",
+          "productId": "amzn1.adg.product.a650dda4-45bf-4ecd-9687-628e3a2b8f5d"
+        }
+      ]
+    }
+  }
+}
