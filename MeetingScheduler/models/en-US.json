@@ -1,0 +1,195 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "scheduler",
+          "intents": [
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "ScheduleMeetingIntent",
+                  "slots": [
+                      {
+                          "name": "whoIntent",
+                          "type": "AMAZON.Person"
+                      },
+                      {
+                          "name": "whenIntent",
+                          "type": "AMAZON.DATE"
+                      },
+                      {
+                          "name": "whereIntent",
+                          "type": "whereSlotType"
+                      },
+                      {
+                          "name": "whatIntent",
+                          "type": "whatSlotType"
+                      },
+                      {
+                          "name": "durationIntent",
+                          "type": "AMAZON.DURATION"
+                      }
+                  ],
+                  "samples": [
+                      "schedule a meeting with {whoIntent} on {whenIntent} for {durationIntent}  at {whereIntent} for {whatIntent}",
+                      "schedule a meeting"
+                  ]
+              },
+              {
+                  "name": "AMAZON.MoreIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateSettingsIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NextIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageUpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PreviousIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollRightIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollLeftIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollUpIntent",
+                  "samples": []
+              }
+          ],
+          "types": [
+              {
+                  "name": "whereSlotType",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "coffee shop"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "bar"
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "whatSlotType",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "drink"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "ScheduleMeetingIntent",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "whoIntent",
+                          "type": "AMAZON.Person",
+                          "confirmationRequired": false,
+                          "elicitationRequired": false,
+                          "prompts": {}
+                      },
+                      {
+                          "name": "whenIntent",
+                          "type": "AMAZON.DATE",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.319350477785.1033657692903"
+                          }
+                      },
+                      {
+                          "name": "whereIntent",
+                          "type": "whereSlotType",
+                          "confirmationRequired": false,
+                          "elicitationRequired": false,
+                          "prompts": {}
+                      },
+                      {
+                          "name": "whatIntent",
+                          "type": "whatSlotType",
+                          "confirmationRequired": false,
+                          "elicitationRequired": false,
+                          "prompts": {}
+                      },
+                      {
+                          "name": "durationIntent",
+                          "type": "AMAZON.DURATION",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.319350477785.370695745580"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "prompts": [
+          {
+              "id": "Elicit.Slot.319350477785.370695745580",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "for how long?"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.319350477785.1033657692903",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "when would you like to meet?"
+                  }
+              ]
+          }
+      ]
+  }
+}
